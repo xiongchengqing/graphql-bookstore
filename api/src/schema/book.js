@@ -5,7 +5,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 let schema = mongoose.Schema({
 name: String,
     author: String,
-    roomId: ObjectId,
+    classificationId: ObjectId,
 
     createdAt: {
         type: Date,

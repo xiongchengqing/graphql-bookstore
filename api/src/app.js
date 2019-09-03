@@ -3,33 +3,8 @@ const Koa = require('koa')
 const app = new Koa()
 const db = require('./service/db')
 
-const books = [
-    {
-        title: 'Harry Potter and the Chamber of Secrets',
-        author: 'J.K. Rowling',
-    },
-    {
-        title: 'Jurassic Park',
-        author: 'Michael Crichton',
-    },
-]
-
-const typeDefs = gql`
-    type Book {
-        title: String
-        author: String
-    }
-
-    type Query {
-        books: [Book]
-    }
-`
-
-const resolvers = {
-    Query: {
-        books: () => books,
-    },
-}
+const typeDefs = gql(require('./graphql/typeDefs'))
+const resolvers = require('./graphql/resolvers')
 
 const server = new ApolloServer({
     typeDefs,
