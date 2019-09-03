@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/run.js"
+  },
+  "keywords": [
+    "graphql",
+    "koa",
+    "apollo"
+  ],
+  "author": "Xiong,Cheng-Qing",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-koa": "^2.9.0",
+    "config": "^3.2.2",
+    "graphql": "^14.5.3",
+    "koa": "^2.8.1",
+    "mongoose": "^5.6.11"
+  }
+}
